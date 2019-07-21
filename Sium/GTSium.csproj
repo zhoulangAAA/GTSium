@@ -1,0 +1,681 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4DC1A9D8-65CF-4A4D-B48C-A420842FF41D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sium</RootNamespace>
+    <AssemblyName>GTSium</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Geckofx-Core, Version=33.0.5.0, Culture=neutral, PublicKeyToken=3209ac31600d1857, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Geckofx-Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Geckofx-Winforms, Version=33.0.5.0, Culture=neutral, PublicKeyToken=3209ac31600d1857, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Geckofx-Winforms.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.6.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="HttpHelper, Version=1.9.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\HttpHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="Infragistics4.Documents.Excel.v12.2, Version=12.2.20122.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Shared.v12.2, Version=12.2.20122.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.Misc.v12.2, Version=12.2.20122.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.SupportDialogs.v12.2, Version=12.2.20122.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinCalcManager.v12.2, Version=12.2.20122.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinCalcManager.v12.2.FormulaBuilder, Version=12.2.20122.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.UltraWinDataSource.v12.2, Version=12.2.20122.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinEditors.v12.2, Version=12.2.20122.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.UltraWinExplorerBar.v12.2, Version=12.2.20122.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinGrid.ExcelExport.v12.2, Version=12.2.20122.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinGrid.v12.2, Version=12.2.20122.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinListBar.v12.2, Version=12.2.20122.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinListView.v12.2, Version=12.2.20122.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.UltraWinMaskedEdit.v12.2, Version=12.2.20122.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinSchedule.v12.2, Version=12.2.20122.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinTabControl.v12.2, Version=12.2.20122.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.UltraWinToolbars.v12.2, Version=12.2.20122.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Infragistics4.Win.UltraWinTree.v12.2, Version=12.2.20122.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics4.Win.v12.2, Version=12.2.20122.1006, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WebDriver, Version=3.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.4.0\lib\net40\WebDriver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebDriver.Support, Version=3.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.Support.3.4.0\lib\net40\WebDriver.Support.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Chanmu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chanmu.Designer.cs">
+      <DependentUpon>Chanmu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="charList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="charList.Designer.cs">
+      <DependentUpon>charList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="cmKeyfrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cmKeyfrom.Designer.cs">
+      <DependentUpon>cmKeyfrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DayListPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DayListPage.Designer.cs">
+      <DependentUpon>DayListPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dayListpro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dayListpro.Designer.cs">
+      <DependentUpon>dayListpro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DayLit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DayLit.Designer.cs">
+      <DependentUpon>DayLit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DPImages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DPImages.Designer.cs">
+      <DependentUpon>DPImages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DPindex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DPindex.Designer.cs">
+      <DependentUpon>DPindex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DPList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DPList.Designer.cs">
+      <DependentUpon>DPList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DPNum.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DPNum.Designer.cs">
+      <DependentUpon>DPNum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DPoneLook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DPoneLook.Designer.cs">
+      <DependentUpon>DPoneLook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DppayList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DppayList.Designer.cs">
+      <DependentUpon>DppayList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dztc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dztc.Designer.cs">
+      <DependentUpon>Dztc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EMS.Designer.cs">
+      <DependentUpon>EMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Etrace.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formtest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formtest.Designer.cs">
+      <DependentUpon>Formtest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GNumber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GNumber.Designer.cs">
+      <DependentUpon>GNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hqkeyword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hqkeyword.Designer.cs">
+      <DependentUpon>hqkeyword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HttpPost.cs" />
+    <Compile Include="Jxtxt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jxtxt.Designer.cs">
+      <DependentUpon>Jxtxt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="keyword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="keyword.Designer.cs">
+      <DependentUpon>keyword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KeyWordTao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KeyWordTao.Designer.cs">
+      <DependentUpon>KeyWordTao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListTao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListTao.Designer.cs">
+      <DependentUpon>ListTao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAXList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAXList.Designer.cs">
+      <DependentUpon>MAXList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDIParent1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIParent1.Designer.cs">
+      <DependentUpon>MDIParent1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageProcess.cs" />
+    <Compile Include="NewListZTC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewListZTC.Designer.cs">
+      <DependentUpon>NewListZTC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="onDP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="onDP.Designer.cs">
+      <DependentUpon>onDP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OUexecl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OUexecl.Designer.cs">
+      <DependentUpon>OUexecl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="outzkey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="outzkey.Designer.cs">
+      <DependentUpon>outzkey.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfilesIni.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="pstest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pstest.Designer.cs">
+      <DependentUpon>pstest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ELangWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ShopDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShopDate.Designer.cs">
+      <DependentUpon>ShopDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="shopList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="shopList.Designer.cs">
+      <DependentUpon>shopList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaobaoB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaobaoB.Designer.cs">
+      <DependentUpon>TaobaoB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaoBaoCC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaoBaoCC.Designer.cs">
+      <DependentUpon>TaoBaoCC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaosysData.cs">
+      <DependentUpon>TaosysData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TaosysData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TaosysData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="TaoTxt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TaoTxt.Designer.cs">
+      <DependentUpon>TaoTxt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="test2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="test2.Designer.cs">
+      <DependentUpon>test2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tplist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tplist.Designer.cs">
+      <DependentUpon>Tplist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TxtImg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TxtImg.Designer.cs">
+      <DependentUpon>TxtImg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserLg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserLg.Designer.cs">
+      <DependentUpon>UserLg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Webinsert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Webinsert.Designer.cs">
+      <DependentUpon>Webinsert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XMlist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XMlist.Designer.cs">
+      <DependentUpon>XMlist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ztc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ztc.Designer.cs">
+      <DependentUpon>ztc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZTCPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZTCPage.Designer.cs">
+      <DependentUpon>ZTCPage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Chanmu.resx">
+      <DependentUpon>Chanmu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="charList.resx">
+      <DependentUpon>charList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cmKeyfrom.resx">
+      <DependentUpon>cmKeyfrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DayListPage.resx">
+      <DependentUpon>DayListPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dayListpro.resx">
+      <DependentUpon>dayListpro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DayLit.resx">
+      <DependentUpon>DayLit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DPImages.resx">
+      <DependentUpon>DPImages.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DPindex.resx">
+      <DependentUpon>DPindex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DPList.resx">
+      <DependentUpon>DPList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DPNum.resx">
+      <DependentUpon>DPNum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DPoneLook.resx">
+      <DependentUpon>DPoneLook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DppayList.resx">
+      <DependentUpon>DppayList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dztc.resx">
+      <DependentUpon>Dztc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EMS.resx">
+      <DependentUpon>EMS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formtest.resx">
+      <DependentUpon>Formtest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GNumber.resx">
+      <DependentUpon>GNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hqkeyword.resx">
+      <DependentUpon>hqkeyword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jxtxt.resx">
+      <DependentUpon>Jxtxt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="keyword.resx">
+      <DependentUpon>keyword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KeyWordTao.resx">
+      <DependentUpon>KeyWordTao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListTao.resx">
+      <DependentUpon>ListTao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAXList.resx">
+      <DependentUpon>MAXList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIParent1.resx">
+      <DependentUpon>MDIParent1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewListZTC.resx">
+      <DependentUpon>NewListZTC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="onDP.resx">
+      <DependentUpon>onDP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OUexecl.resx">
+      <DependentUpon>OUexecl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="outzkey.resx">
+      <DependentUpon>outzkey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="pstest.resx">
+      <DependentUpon>pstest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShopDate.resx">
+      <DependentUpon>ShopDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="shopList.resx">
+      <DependentUpon>shopList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaobaoB.resx">
+      <DependentUpon>TaobaoB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaoBaoCC.resx">
+      <DependentUpon>TaoBaoCC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaoTxt.resx">
+      <DependentUpon>TaoTxt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test2.resx">
+      <DependentUpon>test2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tplist.resx">
+      <DependentUpon>Tplist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TxtImg.resx">
+      <DependentUpon>TxtImg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Webinsert.resx">
+      <DependentUpon>Webinsert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XMlist.resx">
+      <DependentUpon>XMlist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ztc.resx">
+      <DependentUpon>ztc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZTCPage.resx">
+      <DependentUpon>ZTCPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="json1.json" />
+    <None Include="json2.json" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\ELangWebService\goex.wsdl" />
+    <None Include="Service References\ELangWebService\Sium.ELangWebService.HelloWorldResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ELangWebService\Sium.ELangWebService.stringJsonResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="TaosysData.xsc">
+      <DependentUpon>TaosysData.xsd</DependentUpon>
+    </None>
+    <None Include="TaosysData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TaosysData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TaosysData.xss">
+      <DependentUpon>TaosysData.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{7323dff8-ebe8-43e8-b0d5-28cd0dbbced6}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NewDataAccess\NewDataAccess.csproj">
+      <Project>{5f565d5a-892f-404a-aa50-2db85934298d}</Project>
+      <Name>NewDataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rules\Rules.csproj">
+      <Project>{b6024793-1192-4123-9273-1e19bc89f845}</Project>
+      <Name>Rules</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bitbug_favicon.ico" />
+    <Content Include="HTMLPage1.html" />
+    <Content Include="JavaScript1.js" />
+    <None Include="Service References\ELangWebService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ELangWebService\configuration.svcinfo" />
+    <None Include="Service References\ELangWebService\configuration91.svcinfo" />
+    <None Include="Service References\ELangWebService\goex.disco" />
+    <None Include="Resources\zasystopbg21.png" />
+    <None Include="Resources\zasystopbg11.png" />
+    <None Include="Resources\zasystopbg1.png" />
+    <None Include="Resources\zasysstart.png" />
+    <None Include="Resources\zasysprint.png" />
+    <None Include="Resources\zasyslogo.png" />
+    <None Include="Resources\zasyslogintop.png" />
+    <None Include="Resources\zasysloginpass.png" />
+    <None Include="Resources\zasysloginout.png" />
+    <None Include="Resources\zasyslestbg.png" />
+    <None Include="Resources\zasyshelp.png" />
+    <None Include="Resources\zasysfunclose.png" />
+    <None Include="Resources\zasysfuncclose.png" />
+    <None Include="Resources\zasysfun.png" />
+    <None Include="Resources\zasysflow.png" />
+    <None Include="Resources\zasysabout.png" />
+    <None Include="Resources\zanavigatorupdate.png" />
+    <None Include="Resources\zanavigatorsave.png" />
+    <None Include="Resources\zanavigatorref.png" />
+    <None Include="Resources\zanavigatorquery.png" />
+    <None Include="Resources\zanavigatorpaging.png" />
+    <None Include="Resources\zanavigatormoveprevious.png" />
+    <None Include="Resources\zanavigatormovenext.png" />
+    <None Include="Resources\zanavigatormovelast.png" />
+    <None Include="Resources\zanavigatormovefirst.png" />
+    <None Include="Resources\zanavigatorentry.png" />
+    <None Include="Resources\zanavigatordelete.png" />
+    <None Include="Resources\zanavigatordefault.png" />
+    <None Include="Resources\zanavigatorcancel.png" />
+    <None Include="Resources\zanavigatoradd.png" />
+    <None Include="Resources\zafundefaultimg.png" />
+    <None Include="Resources\logo.jpg" />
+    <None Include="Resources\lisflow04.png" />
+    <None Include="Resources\lisflow03.png" />
+    <None Include="Resources\lisflow02.png" />
+    <None Include="Resources\lisflow01.png" />
+    <None Include="Resources\Image2.png" />
+    <None Include="Resources\image1.bmp" />
+    <None Include="Resources\helpimg1.png" />
+    <None Include="Resources\helpimg.png" />
+    <None Include="Resources\but.gif" />
+    <None Include="Resources\Image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ELangWebService\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Selenium.Firefox.WebDriver.0.16.1\build\Selenium.Firefox.WebDriver.targets" Condition="Exists('..\packages\Selenium.Firefox.WebDriver.0.16.1\build\Selenium.Firefox.WebDriver.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Selenium.Firefox.WebDriver.0.16.1\build\Selenium.Firefox.WebDriver.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Selenium.Firefox.WebDriver.0.16.1\build\Selenium.Firefox.WebDriver.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
